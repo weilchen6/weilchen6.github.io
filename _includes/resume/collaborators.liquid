@@ -1,0 +1,13 @@
+<div class="list-groups">
+  {% for content in data[1] %}
+    <div class="list-group col-md-10">
+      <ul class="list-group-table" style="font-size: 0.9rem; margin-bottom: -20px; list-style-type: disc; padding-left: 20px;">
+        {% for item in content.keywords %}
+          <li class="list-group-name">
+            {{ item }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
