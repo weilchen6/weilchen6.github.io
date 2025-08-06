@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Graduated with a Master's degree in Computer Science from Heilongjiang University! :tada:
+Received the Outstanding Master's Thesis award from Heilongjiang University! :tada:
