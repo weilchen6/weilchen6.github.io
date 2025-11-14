@@ -4,10 +4,11 @@
       "name": "Invited Reviewer",
       "icon": "fa-solid fa-pen-nib",
       "keywords": [
-        "IEEE Transactions on Mobile Computing (TMC-Feb, July 2025)",
-        "IEEE Internet of Things Journal (IOTJ-Oct, Dec 2024; Feb, Jan, Mar, April, June, July 2025)",
-        "IEEE Transactions on Neural Networks and Learning Systems (TNNLS-Feb 2024)",
-        "IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2025)"
+        "-- IEEE Internet of Things Journal (IOTJ-Oct.& Dec. 2024; Feb.& Jan.& Mar.& Apr.& Jun.& Jul.& Oct.& Nov. 2025)",
+        "-- THE ACM WEB CONFERENCE 2026",
+        "-- IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM 2025)",
+        "-- IEEE Transactions on Mobile Computing (TMC-Feb, July 2025)",
+        "-- IEEE Transactions on Neural Networks and Learning Systems (TNNLS-Feb 2024)"
       ]
     },
     {
@@ -98,8 +99,7 @@
   "collaborators": [
     {
       "keywords": [
-        "Yang Zhou, Associate Researcher at UCLA"
       ]
     }
-  ],
+  ]
 }
