@@ -30,6 +30,24 @@ body.sticky-bottom-footer {
 .container {
   max-width: $max-content-width;
 }
+.clustrmaps-widget {
+  .clustrmaps-inner--compact {
+    width: 100%;
+    max-width: 300px;
+    margin-inline: auto;
+
+    iframe,
+    canvas {
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  .clustrmaps-inner img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 // Profile
 .profile {
