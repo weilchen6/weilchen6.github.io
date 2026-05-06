@@ -30,6 +30,19 @@ body.sticky-bottom-footer {
 .container {
   max-width: $max-content-width;
 }
+
+.about-page-title {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: #3d1f56;
+
+  html[data-theme="dark"] & {
+    color: #c9b1e0;
+  }
+}
+
 .clustrmaps-widget {
   .clustrmaps-inner--compact {
     width: 100%;
