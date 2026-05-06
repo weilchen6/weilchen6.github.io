@@ -87,7 +87,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 clustrmaps:
   enabled: true
   heading: "Visitors"
-  max_width: "300px" # outer box (try 260px–360px if you want smaller/larger)
+  max_width: "200px" # outer box (try 260px–360px if you want smaller/larger)
 
 
 # -----------------------------------------------------------------------------
