@@ -86,7 +86,6 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 clustrmaps:
   enabled: true
-  heading:
   max_width: "200px" 
 
 
