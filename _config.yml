@@ -84,6 +84,12 @@ openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
+clustrmaps:
+  enabled: true
+  heading: "Visitors"
+  max_width: "300px" # outer box (try 260px–360px if you want smaller/larger)
+
+
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
