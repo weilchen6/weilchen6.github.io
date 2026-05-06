@@ -583,6 +583,21 @@ footer.sticky-bottom {
   }
 }
 
+// About homepage name — high specificity + !important so it wins over global `h1 { color }`,
+// Bootstrap/MDB, and base.scss load order (layout.scss is imported before this file).
+.post .post-header.about-page-header h1.about-page-title {
+  font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.2 !important;
+  color: #3d1f56 !important;
+}
+
+html[data-theme="dark"] .post .post-header.about-page-header h1.about-page-title {
+  color: #c9b1e0 !important;
+}
+
+
 .post-list {
   margin: 0;
   margin-bottom: 40px;
