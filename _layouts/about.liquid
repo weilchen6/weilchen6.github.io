@@ -57,7 +57,9 @@ layout: default
     {% endif %}
 
 
-    
+    {% if site.clustrmaps.enabled %}
+      {% include clustrmaps_widget.liquid %}
+    {% endif %}
 
   </article>
 </div>
