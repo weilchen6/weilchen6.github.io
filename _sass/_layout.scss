@@ -31,46 +31,97 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
+// Robot mark used in place of the wordmark in the navbar.
+.navbar-mark {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
-.clustrmaps-widget {
-  /* globe.js injects iframe/canvas near the script — force block + auto margins */
-  .clustrmaps-inner--compact {
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.robot-mark {
+  display: block;
+  width: auto;
+  height: 34px;
+}
 
-    iframe,
-    canvas {
-      display: block !important;
-      margin-left: auto !important;
-      margin-right: auto !important;
-      max-width: 100% !important;
-      height: auto !important;
-    }
+// Name set in the blocky segmented letterforms (see _includes/name_blocks.liquid).
+// The <h1> keeps the real text for screen readers; the SVG is the visible mark.
+.blockname-title {
+  // Half the content column at most.
+  --blockname-width: 450px;
+  line-height: 0;
+  margin-bottom: 1.25rem;
+}
 
-    #clstr_globe {
-      display: block;
-      margin: 0 auto;
-    }
-  }
+.blockname {
+  display: block;
+  width: 100%;
+  max-width: var(--blockname-width);
+  height: auto;
+  // Same purples the plain title used before.
+  color: #3d1f56;
+}
 
-  .clustrmaps-inner img {
-    max-width: 100%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
+html[data-theme="dark"] .blockname {
+  color: #c9b1e0;
+}
+
+// Intro paragraphs on the about page, set a step larger than the 1rem default.
+// Justified with hyphenation, the way a LaTeX paragraph sets: without breaking
+// words the flush right edge would open large gaps in a column this narrow.
+.about-body {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+// The contact line under the title reads as part of that intro, so it is set
+// at the same size.
+.about-page-header .desc {
+  font-size: 1.15rem;
 }
 
 // Profile
 .profile {
+  // <picture> is inline by default, which leaves a baseline gap under the
+  // image and keeps it from filling the column.
+  picture {
+    display: block;
+  }
+
   img {
-    width: 80%;
+    // Wide enough that the address line below fits on one line.
+    width: 92%;
+    display: block;
+    // Centered while the profile spans the full width (narrow screens).
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Once the profile becomes its own column, flush the image against the right
+  // edge of that column, and hold the address block to the image's box so the
+  // two share a left and right edge.
+  @media (min-width: 576px) {
+    img {
+      margin-right: 0;
+    }
+
+    .more-info {
+      width: 92%;
+      margin-left: auto;
+    }
+  }
+}
+
+// Inset the profile column by the same 3rem the navbar links use, so the
+// photo's right edge lands on the end of the last nav item.
+@media (min-width: 576px) {
+  .profile.float-right {
+    margin-right: 3rem;
   }
 }
 

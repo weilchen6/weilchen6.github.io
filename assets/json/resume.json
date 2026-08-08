@@ -4,6 +4,7 @@
       "name": "Invited Reviewer",
       "icon": "fa-solid fa-pen-nib",
       "keywords": [
+        "-- Scientific Report 2026",
         "-- ICIP 2026",
         "-- ICASSP 2026",
         "-- IEEE IOTJ 2024, 2025, 2026",
@@ -20,7 +21,6 @@
         "Believe you can and you're halfway there."
       ]
     }
-    
   ],
   "honors": [
     {
@@ -37,10 +37,7 @@
         "The First Prize at The 12th Harbin College Students Entrepreneurship Competition, Heilongjiang Province, 2021"
       ]
     }
-    
   ],
-  
-  
   "education": [
     {
       "institution": "Heilongjiang University, Harbin, Heilongjiang",
@@ -51,7 +48,9 @@
       "startDate": "2022-08",
       "endDate": "2025-06",
       "score": "10",
-      "courses": ["Theory of Relativity"]
+      "courses": [
+        "Theory of Relativity"
+      ]
     },
     {
       "institution": "Heilongjiang University, Harbin, Heilongjiang",
@@ -62,7 +61,9 @@
       "startDate": "2018-09",
       "endDate": "2022-06",
       "score": "10",
-      "courses": ["Theory of Relativity"]
+      "courses": [
+        "Theory of Relativity"
+      ]
     },
     {
       "institution": "Texas Tech University, Lubbock, TX",
@@ -73,7 +74,9 @@
       "startDate": "2025-08",
       "endDate": "",
       "score": "10",
-      "courses": ["Theory of Relativity"]
+      "courses": [
+        "Theory of Relativity"
+      ]
     }
   ],
   "languages": [
@@ -95,13 +98,12 @@
   ],
   "work": [
     {
-      "name": "The only way to do great work is to love what you do." 
+      "name": "The only way to do great work is to love what you do."
     }
   ],
   "collaborators": [
     {
-      "keywords": [
-      ]
+      "keywords": []
     }
   ]
 }

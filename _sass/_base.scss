@@ -287,8 +287,16 @@ ul.task-list input[type="checkbox"] {
     color: var(--global-text-color);
   }
 
+  // Stay right-aligned, but inset from the right edge rather than flush to it.
+  @media (min-width: 576px) {
+    .navbar-nav {
+      margin-right: 3rem;
+    }
+  }
+
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-size: 1.1rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -729,7 +737,7 @@ html[data-theme="dark"] .post .post-header.about-page-header h1.about-page-title
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    color: var(--global-text-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
@@ -1080,12 +1088,12 @@ nav[data-toggle="toc"] {
   top: 5rem;
 
   .nav .nav > li > a {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .nav > li > a {
     color: var(--global-text-color);
-    font-size: 0.75rem;
+    font-size: 0.95rem;
 
     &:hover {
       color: var(--global-hover-color);
@@ -1096,7 +1104,7 @@ nav[data-toggle="toc"] {
   .nav-link.active {
     color: var(--global-theme-color);
     border-left-color: var(--global-theme-color);
-    font-size: 0.75rem;
+    font-size: 0.95rem;
 
     &:hover {
       color: var(--global-hover-color);
