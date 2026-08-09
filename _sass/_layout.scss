@@ -97,12 +97,20 @@ html[data-theme="dark"] .blockname {
   top: -46px;
   right: 6%;
   z-index: 2;
-  display: none; // only once the profile is its own column
 }
 
-@media (min-width: 576px) {
+// While the column is narrow the bubble would land on the contact line, so the
+// agent sits inside the portrait instead of above it and the bubble drops onto
+// the picture. Measured: the collision clears at about 640px.
+@media (max-width: 639.98px) {
   .agent {
-    display: block;
+    top: 6px;
+    right: 4%;
+  }
+
+  .agent-bubble {
+    top: 46px;
+    max-width: 12rem;
   }
 }
 
