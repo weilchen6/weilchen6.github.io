@@ -1,49 +1,57 @@
 <div class="agent" data-agent>
   <div class="agent-bubble" data-agent-bubble hidden></div>
   <button class="agent-btn" type="button" data-agent-btn aria-label="Say hi to the agent">
+    <!--
+      Built the way the name in name_blocks.liquid is: horizontal runs merge
+      into solid bars, and the rows stay separated by a gap.
+    -->
     <svg class="agent-svg" viewBox="0 0 72 96" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="agentGrad" x1="0" y1="0" x2="0.3" y2="1">
-          <stop offset="0%" stop-color="#6b3f8f"/>
-          <stop offset="100%" stop-color="#3d1f56"/>
+          <stop offset="0%" stop-color="var(--agent-from, #6b3f8f)"/>
+          <stop offset="100%" stop-color="var(--agent-to, #3d1f56)"/>
         </linearGradient>
       </defs>
 
       <!-- legs hang over the edge it sits on -->
       <g class="agent-leg agent-leg--l" fill="url(#agentGrad)">
-        <rect x="23" y="64" width="9" height="22" rx="4"/>
-        <rect x="20" y="84" width="15" height="6" rx="3"/>
+        <rect x="23" y="68" width="10" height="9"/>
+        <rect x="23" y="79" width="10" height="9"/>
+        <rect x="20" y="90" width="16" height="6"/>
       </g>
       <g class="agent-leg agent-leg--r" fill="url(#agentGrad)">
-        <rect x="40" y="64" width="9" height="22" rx="4"/>
-        <rect x="37" y="84" width="15" height="6" rx="3"/>
+        <rect x="39" y="68" width="10" height="9"/>
+        <rect x="39" y="79" width="10" height="9"/>
+        <rect x="36" y="90" width="16" height="6"/>
       </g>
 
-      <g class="agent-body">
+      <g class="agent-body" fill="url(#agentGrad)">
         <!-- antenna -->
-        <rect x="34.5" y="7" width="3" height="8" fill="url(#agentGrad)"/>
-        <circle cx="36" cy="5" r="3.2" fill="url(#agentGrad)"/>
+        <rect x="33" y="2" width="6" height="6"/>
+        <rect x="34.5" y="9" width="3" height="4"/>
 
-        <!-- head -->
-        <rect x="17" y="14" width="38" height="27" rx="7" fill="url(#agentGrad)"/>
+        <!-- head, three bars with the gaps left between rows -->
+        <rect x="17" y="14" width="38" height="7"/>
+        <rect x="17" y="22" width="38" height="8"/>
+        <rect x="17" y="31" width="38" height="7"/>
         <g class="agent-eyes">
-          <circle cx="27.5" cy="27" r="4.6" fill="#fff"/>
-          <circle cx="44.5" cy="27" r="4.6" fill="#fff"/>
-          <circle cx="27.5" cy="27" r="2" fill="#2a1240"/>
-          <circle cx="44.5" cy="27" r="2" fill="#2a1240"/>
+          <rect x="24" y="23" width="6" height="6" fill="#fff"/>
+          <rect x="42" y="23" width="6" height="6" fill="#fff"/>
         </g>
-        <rect x="31" y="34" width="10" height="3" rx="1.5" fill="#fff" opacity=".85"/>
+        <rect x="31" y="32.5" width="10" height="4" fill="#fff" opacity=".85"/>
 
         <!-- torso -->
-        <rect x="32" y="41" width="8" height="4" fill="url(#agentGrad)"/>
-        <rect x="15" y="44" width="42" height="23" rx="6" fill="url(#agentGrad)"/>
-        <circle cx="36" cy="55" r="4.4" fill="#fff" opacity=".9"/>
-        <circle class="agent-core" cx="36" cy="55" r="2" fill="#6b3f8f"/>
+        <rect x="16" y="42" width="40" height="7"/>
+        <rect x="16" y="50" width="40" height="7"/>
+        <rect class="agent-core" x="32" y="51" width="8" height="5" fill="#fff"/>
+        <rect x="16" y="58" width="40" height="7"/>
 
         <!-- arms -->
-        <rect x="7" y="46" width="7" height="17" rx="3.5" fill="url(#agentGrad)"/>
+        <rect x="7" y="44" width="7" height="9"/>
+        <rect x="7" y="55" width="7" height="9"/>
         <g class="agent-arm">
-          <rect x="58" y="46" width="7" height="17" rx="3.5" fill="url(#agentGrad)"/>
+          <rect x="58" y="44" width="7" height="9"/>
+          <rect x="58" y="55" width="7" height="9"/>
         </g>
       </g>
     </svg>

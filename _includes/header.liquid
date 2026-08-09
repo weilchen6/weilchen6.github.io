@@ -113,9 +113,13 @@
           {% endfor %}
           
           {% if site.enable_darkmode %}
-            <!-- Toogle theme mode -->
+            <!-- Theme toggle. _themes.scss shows one icon per
+                 data-theme-setting; only light and dark are reachable. -->
             <li class="toggle-container">
-              
+              <button id="light-toggle" type="button" title="Change theme" aria-label="Change theme">
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
             </li>
           {% endif %}
         </ul>

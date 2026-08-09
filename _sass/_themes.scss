@@ -77,31 +77,32 @@
 }
 
 html[data-theme="dark"] {
+  // Deep ink ground with a single teal accent.
   color-scheme: dark;
-  --global-bg-color: #{$grey-color-dark};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$cyan-color};
-  --global-hover-color: #{$cyan-color};
-  --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
-  --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
-  --global-card-bg-color: #{$grey-900};
+  --global-bg-color: #{$dark-bg};
+  --global-code-bg-color: #{$dark-surface};
+  --global-text-color: #{$dark-text};
+  --global-text-color-light: #{$dark-text-dim};
+  --global-theme-color: #{$dark-teal};
+  --global-hover-color: #{$dark-teal-bright};
+  --global-hover-text-color: #{$dark-bg};
+  --global-footer-bg-color: #{$dark-surface};
+  --global-footer-text-color: #{$dark-text-dim};
+  --global-footer-link-color: #{$dark-teal};
+  --global-distill-app-color: #{$dark-text};
+  --global-divider-color: #{$dark-divider};
+  --global-card-bg-color: #{$dark-surface};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
     #{color.channel($white-color, "blue", $space: rgb)},
     0.5
   );
-  --global-back-to-top-text-color: #{$black-color};
-  --global-newsletter-bg-color: #{$grey-color-light};
-  --global-newsletter-text-color: #{$grey-color-dark};
+  --global-back-to-top-text-color: #{$dark-bg};
+  --global-newsletter-bg-color: #{$dark-surface};
+  --global-newsletter-text-color: #{$dark-text};
 
-  --global-tip-block: #42b983;
+  --global-tip-block: #{$dark-teal};
   --global-tip-block-bg: #e2f5ec;
   --global-tip-block-text: #215d42;
   --global-tip-block-title: #359469;

@@ -69,7 +69,7 @@ body.sticky-bottom-footer {
 }
 
 html[data-theme="dark"] .blockname {
-  color: #c9b1e0;
+  color: #4fd1c5;
 }
 
 // Intro paragraphs on the about page, set a step larger than the 1rem default.
@@ -127,21 +127,21 @@ html[data-theme="dark"] .blockname {
 }
 
 .agent-arm {
-  transform-origin: 61px 49px;
+  transform-origin: 61px 47px;
 }
 
 .agent-leg--l {
-  transform-origin: 27px 66px;
+  transform-origin: 28px 68px;
   animation: agent-swing 3.4s ease-in-out infinite;
 }
 
 .agent-leg--r {
-  transform-origin: 45px 66px;
+  transform-origin: 44px 68px;
   animation: agent-swing 3.4s ease-in-out infinite reverse;
 }
 
 .agent-eyes {
-  transform-origin: 36px 27px;
+  transform-origin: 36px 26px;
   animation: agent-blink 5.2s infinite;
 }
 
@@ -206,6 +206,12 @@ html[data-theme="dark"] .blockname {
     border-top: 1px solid var(--global-divider-color);
     transform: rotate(45deg);
   }
+}
+
+// The agent is purple on the light page and teal on the dark one.
+html[data-theme="dark"] .agent-svg {
+  --agent-from: #75e0d6;
+  --agent-to: #4fd1c5;
 }
 
 @media (prefers-reduced-motion: reduce) {
