@@ -232,6 +232,12 @@ html[data-theme="dark"] .blockname {
     // Wide enough that the address line below fits on one line.
     width: 92%;
     display: block;
+    // A little more lift than the theme's z-depth-1: a tight contact shadow
+    // under the frame, then two softer layers for the falloff.
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.1),
+      0 4px 10px rgba(0, 0, 0, 0.13),
+      0 12px 26px rgba(0, 0, 0, 0.11);
     // Centered while the profile spans the full width (narrow screens).
     margin-left: auto;
     margin-right: auto;
@@ -250,6 +256,15 @@ html[data-theme="dark"] .blockname {
       margin-left: auto;
     }
   }
+}
+
+// A shadow that reads on the light page disappears on the dark one, so the
+// dark theme gets a deeper cast.
+html[data-theme="dark"] .profile img {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.45),
+    0 14px 30px rgba(0, 0, 0, 0.4);
 }
 
 // Inset the profile column by the same 3rem the navbar links use, so the
