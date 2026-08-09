@@ -31,7 +31,7 @@ body.sticky-bottom-footer {
   max-width: $max-content-width;
 }
 
-// Robot mark used in place of the wordmark in the navbar.
+// Institution mark used in place of the wordmark in the navbar.
 .navbar-mark {
   display: inline-flex;
   align-items: center;
@@ -39,10 +39,15 @@ body.sticky-bottom-footer {
   padding-bottom: 0;
 }
 
-.robot-mark {
+.ttu-mark {
   display: block;
   width: auto;
   height: 34px;
+}
+
+// Page headings on the inner pages read as titles, not labels.
+.post-header .post-title {
+  font-weight: 700;
 }
 
 // Name set in the blocky segmented letterforms (see _includes/name_blocks.liquid).
@@ -85,8 +90,138 @@ html[data-theme="dark"] .blockname {
   font-size: 1.15rem;
 }
 
+// A small agent perched on the top edge of the portrait: idles, blinks, and
+// waves when greeted. Decorative, so it never takes focus away from content.
+.agent {
+  position: absolute;
+  top: -46px;
+  right: 6%;
+  z-index: 2;
+  display: none; // only once the profile is its own column
+}
+
+@media (min-width: 576px) {
+  .agent {
+    display: block;
+  }
+}
+
+.agent-btn {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.agent-svg {
+  width: 54px;
+  height: auto;
+  overflow: visible;
+}
+
+.agent-body {
+  transform-origin: 36px 60px;
+  animation: agent-bob 3.4s ease-in-out infinite;
+}
+
+.agent-arm {
+  transform-origin: 61px 49px;
+}
+
+.agent-leg--l {
+  transform-origin: 27px 66px;
+  animation: agent-swing 3.4s ease-in-out infinite;
+}
+
+.agent-leg--r {
+  transform-origin: 45px 66px;
+  animation: agent-swing 3.4s ease-in-out infinite reverse;
+}
+
+.agent-eyes {
+  transform-origin: 36px 27px;
+  animation: agent-blink 5.2s infinite;
+}
+
+.agent-core {
+  animation: agent-pulse 2.6s ease-in-out infinite;
+}
+
+// Waving is a reply to being greeted, not an idle loop.
+.agent[data-waving] .agent-arm {
+  animation: agent-wave 0.5s ease-in-out 3;
+}
+
+@keyframes agent-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+@keyframes agent-swing {
+  0%, 100% { transform: rotate(5deg); }
+  50% { transform: rotate(-7deg); }
+}
+
+@keyframes agent-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@keyframes agent-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes agent-wave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-38deg); }
+}
+
+.agent-bubble {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 4px;
+  width: max-content;
+  max-width: 15rem;
+  padding: 7px 11px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    top: 12px;
+    width: 8px;
+    height: 8px;
+    background: var(--global-bg-color);
+    border-right: 1px solid var(--global-divider-color);
+    border-top: 1px solid var(--global-divider-color);
+    transform: rotate(45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agent-body,
+  .agent-leg,
+  .agent-eyes,
+  .agent-core,
+  .agent[data-waving] .agent-arm {
+    animation: none;
+  }
+}
+
 // Profile
 .profile {
+  position: relative;
+
   // <picture> is inline by default, which leaves a baseline gap under the
   // image and keeps it from filling the column.
   picture {

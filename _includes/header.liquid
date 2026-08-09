@@ -3,15 +3,16 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% unless site.enable_navbar_social and page.permalink == '/' %}
-        <a class="navbar-brand navbar-mark" href="{{ site.baseurl }}/">
-          <span class="sr-only">
-            {%- if site.title == 'blank' -%}
-              {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}
-            {%- else -%}
-              {{ site.title }}
-            {%- endif -%}
-          </span>
-          {% include robot_mark.liquid %}
+        <a
+          class="navbar-brand navbar-mark"
+          href="https://www.ttu.edu/"
+          target="_blank"
+          rel="external noopener"
+          title="Texas Tech University"
+        >
+          <!-- The accessible name names the destination, not the site owner. -->
+          <span class="sr-only">Texas Tech University</span>
+          {% include ttu_mark.liquid %}
         </a>
       {% else %}
         <!-- Social Icons -->
